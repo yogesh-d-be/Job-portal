@@ -3,9 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock, faMobile, faUser } from '@fortawesome/free-solid-svg-icons';
 import '../components/register.css'
 function Register() {
-
     const [isSignedUp, setIsSignedUp] = useState(false);
-
     const handleSignUp = () => {
         setIsSignedUp(true);
     }
