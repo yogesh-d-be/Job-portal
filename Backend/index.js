@@ -11,7 +11,7 @@ app.use(cors());
 app.use(router);
 connect();
 
-const port=1000;
+const port=9000;
 
 app.listen(port, ()=>{
     console.log("server run on:",port);

@@ -1,6 +1,9 @@
+const userModel=require('../Model/model')
+const bcrypt = require('bcrypt');
+
 const userRegPost = async (req, res) => {
     try {
-      const { name, email, password,mobile } = req.body;
+      const { name, email, password,MobileNumber } = req.body;
       const userExist = await userModel.findOne({ email });
       console.log(userExist);
       if (userExist) {
@@ -11,7 +14,7 @@ const userRegPost = async (req, res) => {
         name,
         email,
         password: hashPassword,
-        mobile,
+        MobileNumber,
       });
       await newuser.save();
       
@@ -63,3 +66,7 @@ const userRegPost = async (req, res) => {
         .send({ message: "Failed to login ", success: false, error });
     }
   };
+module.exports = {
+    userRegPost,
+    login
+}

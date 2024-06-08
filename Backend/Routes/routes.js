@@ -1,10 +1,8 @@
 const express = require ("express");
 const router = express.Router();
 
-const CreateData = require('../Controller/controller')
+const {userRegPost} = require('../Controller/controller')
 
-
-
-
+router.post("/userregister", userRegPost);
 
 module.exports = router;
