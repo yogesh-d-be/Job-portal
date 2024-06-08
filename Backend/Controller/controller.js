@@ -17,7 +17,6 @@ const userRegPost = async (req, res) => {
         MobileNumber,
       });
       await newuser.save();
-      
       return res.status(201).json({
         data: newuser,
         message: "User created successfully.",
