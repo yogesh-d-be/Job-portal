@@ -33,6 +33,7 @@ const userRegPost = async (req, res) => {
       });
     }
   };
+  
   const login = async (req, res) => {
     try {
       const user = await userModel.findOne({ email: req.body.email });
