@@ -7,7 +7,6 @@ function Register() {
     const handleSignUp = () => {
         setIsSignedUp(true);
     }
-
     return (
         <>
             <div className={`container relative w-[100%] min-h-[100vh] bg-white overflow-hidden max-md:min-h-[800px] max-md:h-[100vh] max-md:before:hidden before:bg-gradient-to-t from-blue-500 via-blue-500 before:absolute before:top-[-10%] before:transform before:-translate-y-1/2 before:w-[2000px] before:h-[2000px] before:rounded-[50%] before:right-1/2 before:transition before:duration-1000 before:ease-in-out ${isSignedUp? 'before:transform before:ease-in-out before:translate-x-[100%] before:-translate-y-1/2 before:right-[55%]':''}`}>
